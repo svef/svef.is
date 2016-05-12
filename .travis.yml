@@ -15,7 +15,7 @@ script:
   - npm run build
 
 after_success:
-  - coveralls
+  - npm run coverage
 
 deploy:
   provider: gcs
