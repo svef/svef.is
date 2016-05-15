@@ -1,0 +1,27 @@
+
+html {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial;
+
+  background: $color-gray;
+  color: $color-gray-light;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+// Default box-sizing to border-box, except for images and hr
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+hr,img {
+  box-sizing: content-box;
+}
