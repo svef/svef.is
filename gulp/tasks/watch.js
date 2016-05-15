@@ -15,6 +15,7 @@ gulp.task('watch', ['build'], () => {
 
   watch([
     `${config.source}/*.html`,
+    `${config.source}/*.txt`,
     `${config.source}/images/**/*.{png,gif,jpg,jpeg,svg}`,
     `${config.source}/fonts/**/*`,
     `${config.source}/data/**/*`,
@@ -22,7 +23,7 @@ gulp.task('watch', ['build'], () => {
   ], () => gulp.start('copy'))
 
   watch([
-    `${config.source}/templates/**/*.{jade,md}`,
+    `${config.source}/templates/**/*.{pug,md}`,
     `${config.source}/images/**/*.svg`,
   ], () => gulp.start('templates'))
 
