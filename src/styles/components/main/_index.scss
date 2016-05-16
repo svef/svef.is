@@ -1,5 +1,50 @@
 
 main {
-  margin: 0;
-  padding: 20px;
+  overflow: hidden;
+
+  position: relative;
+  z-index: 1;
+
+  margin: 0 auto;
+  padding: 0 0 ($footer-height + $spacing);
+
+  max-width: $page-max-width;
+  min-height: 100vh;
+
+  color: $color-gray;
+
+  > grid {
+    max-width: $page-max-width - ($spacing*4);
+    position: relative;
+    z-index: 1;
+
+    text-align: left;
+
+    opacity: 1;
+    transform: translate3d(0,0,0);
+    transition: opacity 500ms, transform 750ms;
+    transition-delay: 1s;
+
+    .loading & {
+      opacity: 0;
+      transform: translate3d(0,20px,0);
+    }
+  }
+
+  &:after {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0;
+
+    content: '';
+
+    background: $color-gray-light;
+
+    transition: transform 500ms ease 250ms;
+    transform: rotateY(0deg);
+
+    .loading & {
+      transform: rotateY(90deg);
+    }
+  }
 }

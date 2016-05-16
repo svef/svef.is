@@ -1,13 +1,17 @@
 doctype html
 
-html
+html.loading
   include _head
 
   body
-    block nav
+    loading
+      include ../../images/svef-logo.svg
 
     main
-      block main
+      block header
+        include _header
+
+      block content
 
     block footer
       include _footer

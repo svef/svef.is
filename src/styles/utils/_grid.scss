@@ -55,6 +55,8 @@ grid {
     padding-left: $grid-gutter/2;
     padding-right: $grid-gutter/2;
 
+    text-align: left;
+
     @each $i in $breakArray {
       @include respond-to(nth($i,1)) {
         @include grid-columns(nth($i,1));

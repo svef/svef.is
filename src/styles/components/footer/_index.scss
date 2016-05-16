@@ -1,0 +1,30 @@
+
+footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+
+  margin: auto;
+  padding: $spacing;
+  // width: $page-max-width;
+  height: $footer-height;
+
+  text-align: center;
+
+  background: $color-gray;
+
+  transition: transform 500ms ease 750ms;
+  transform: translate3d(0,0,0);
+
+  .loading & {
+    transform: translate3d(0,100%,0);
+  }
+
+  .svg-logo-svef {
+    margin: auto;
+    width: auto;
+    height: $footer-height - ($spacing*2);
+  }
+}

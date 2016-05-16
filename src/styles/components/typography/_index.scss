@@ -1,5 +1,99 @@
+@import url("http://overpass-30e2.kxcdn.com/overpass.css");
+
+html, body {
+  font-family: "Overpass", "Helvetica Neue", Helvetica, Arial;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 auto $spacing;
+  padding: 0;
+
+  font-weight: 400;
+  line-height: 1.275;
+  letter-spacing: -1px;
+}
 
 h1 {
-  margin: 0 auto 20px;
-  font-weight: 400;
+  font-size: 30px;
+  @include respond-to(medium) {
+    margin-bottom: $spacing*2;
+    font-size: 45px;
+    letter-spacing: -3px;
+  }
+  @include respond-to(large) {
+    font-size: 56px;
+  }
 }
+
+h2 {
+  font-size: 28px;
+  @include respond-to(medium) {
+    font-size: 36px;
+  }
+  @include respond-to(large) {
+    margin-bottom: $spacing*2;
+    font-size: 45px;
+  }
+}
+
+h3 {
+  font-size: 24px;
+  @include respond-to(medium) {
+    font-size: 30px;
+  }
+  @include respond-to(large) {
+    font-size: 36px;
+  }
+}
+
+h4 {
+  font-size: 20px;
+  @include respond-to(medium) {
+    font-size: 22px;
+  }
+  @include respond-to(large) {
+    font-size: 24px;
+  }
+}
+
+h5 {
+  font-size: 20px;
+  letter-spacing: 0;
+}
+
+h6 {
+  font-size: 18px;
+  letter-spacing: 0;
+}
+
+hgroup {
+  @include clearfix;
+  margin-bottom: $spacing;
+
+  h1, h2, h3, h4, h5, h6 {
+    + h1, + h2, + h3, + h4, + h5, + h6 {
+      margin-bottom: -$spacing / 2;
+    }
+  }
+
+  :last-child { margin-bottom: 0; }
+}
+
+p {
+  margin: 0 auto $spacing;
+  font-size: $font-size;
+  font-weight: 300;
+  line-height: 1.875;
+}
+
+a {
+  color: inherit;
+}
+
+.text-small { font-size: $font-size * 0.75; }
+.text-large { font-size: $font-size * 1.125; }
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }

@@ -1,0 +1,23 @@
+
+loading {
+  display: block;
+
+  .svg-logo-svef {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0;
+
+    margin: auto;
+    width: 80%;
+    max-width: 800px;
+
+    opacity: 0;
+    transform: translate3d(0,40vh,0) scale(0.2);
+    transition: opacity 500ms, transform 750ms;
+
+    .loading & {
+      opacity: 1;
+      transform: translate3d(0,0,0) scale(1);
+    }
+  }
+}

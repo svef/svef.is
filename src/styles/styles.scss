@@ -1,9 +1,11 @@
-@import "https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,300|Merriweather:400,700,300";
 
 @import "config";
 @import "utils/index";
 
+@import "components/footer/index";
+@import "components/header/index";
 @import "components/html/index";
+@import "components/loading/index";
 @import "components/main/index";
 @import "components/typography/index";
 @import "components/vectors/index";
