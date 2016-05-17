@@ -9,21 +9,29 @@ main {
   padding: 0 0 ($footer-height + $spacing);
 
   max-width: $page-max-width;
+  min-width: $page-min-width;
   min-height: 100vh;
 
   color: $color-gray;
 
-  > grid {
-    max-width: $page-max-width - ($spacing*4);
+  > .inner{
     position: relative;
     z-index: 1;
 
-    text-align: left;
+    padding: 0;
+
+    @include respond-to(medium) {
+      padding: 0 $spacing*2;
+    }
 
     opacity: 1;
     transform: translate3d(0,0,0);
     transition: opacity 500ms, transform 750ms;
     transition-delay: 1s;
+
+    grid {
+      text-align: left;
+    }
 
     .loading & {
       opacity: 0;
@@ -40,7 +48,7 @@ main {
 
     background: $color-gray-light;
 
-    transition: transform 500ms ease 250ms;
+    transition: transform 416ms ease 416ms;
     transform: rotateY(0deg);
 
     .loading & {

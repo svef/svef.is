@@ -1,20 +1,22 @@
 
-// Footer
-$footer-height: 80px;
-
 // Font
 $font-size: 18px;
 
-// SVEF vefverdlaun colors
-$color-orange: #E7792B;
-$color-green: #56A3A6;
+// SVEF colors
+$color-svef: #E7792B;
+$color-awards: #2B7E99;
+$color-conf: #A63F5B;
 $color-gray: #4A4A4A;
 $color-gray-light: #EBEBEA;
+$color-gray-dark: #1a1a1e;
 
 // Sizes
 $spacing: 20px;
 $page-max-width: 1280px;
 $page-min-width: 320px;
+
+$footer-height: 50px;
+$header-height: 100px;
 
 // Text direction & floats
 $text-direction: ltr;
