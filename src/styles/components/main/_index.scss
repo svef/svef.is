@@ -18,15 +18,15 @@ main {
     padding-bottom: $footer-height + $spacing;
   }
 
+  .hidden-inner {
+    display: none !important;
+  }
+
   > .inner{
     position: relative;
     z-index: 1;
 
     padding: 0;
-
-    @include respond-to(medium) {
-      padding: 0 $spacing*2;
-    }
 
     opacity: 1;
     transform: translate3d(0,0,0);
@@ -37,9 +37,19 @@ main {
       text-align: left;
     }
 
+    html[svef-last] & {
+      transition-delay: 0ms;
+    }
+
+    html[svef-navigating="true"] &,
     .loading & {
       opacity: 0;
       transform: translate3d(0,20px,0);
+      transition: opacity 250ms, transform 500ms;
+    }
+
+    @include respond-to(medium) {
+      padding: 0 $spacing*2;
     }
   }
 
