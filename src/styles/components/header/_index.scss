@@ -170,10 +170,6 @@ header {
 
     .logo svg {
       animation-name: loadingdefault;
-
-      .logo-graphic.logo-svef {
-        fill: $color-gray;
-      }
     }
   }
   html[site='svef'] & {
@@ -244,7 +240,7 @@ header {
     transform: rotate(0deg);
     stroke: $color-gray;
     stroke-width: 4px;
-    fill: $color-gray-light;
+    fill: $color-gray;
   }
 }
 
