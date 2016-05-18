@@ -75,17 +75,17 @@ footer {
     text-align: right;
   }
 
-  html[site='svef'] & {
+  html[svef-site='svef'] & {
     &:after {
       background: $color-svef;
     }
   }
-  html[site='awards'] & {
+  html[svef-site='awards'] & {
     &:after {
       background: $color-awards;
     }
   }
-  html[site='conf'] & {
+  html[svef-site='conf'] & {
     &:after {
       background: $color-conf;
     }

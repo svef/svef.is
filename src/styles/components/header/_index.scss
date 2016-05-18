@@ -21,7 +21,7 @@ header {
     width: 100%;
     height: 4px;
 
-    background: $color-svef;
+    background: $color-gray;
 
     transition: transform 250ms ease 750ms;
     transform: translate3d(0,0,0);
@@ -172,7 +172,7 @@ header {
       animation-name: loadingdefault;
     }
   }
-  html[site='svef'] & {
+  html[svef-site='svef'] & {
     nav a:after,
     &:after {
       background: $color-svef;
@@ -186,7 +186,7 @@ header {
       }
     }
   }
-  html[site='awards'] & {
+  html[svef-site='awards'] & {
     nav a:after,
     &:after {
       background: $color-awards;
@@ -200,7 +200,7 @@ header {
       }
     }
   }
-  html[site='conf'] & {
+  html[svef-site='conf'] & {
     nav a:after,
     &:after {
       background: $color-conf;
