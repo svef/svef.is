@@ -31,6 +31,12 @@ npm run test
   nyc ava
 ```
 
+*Run tests on every change*
+```
+npm run test-dev
+  supervisor --quiet --watch test,src/scripts --no-restart-on exit --exec npm -- run test --silent
+```
+
 *Send coverage to coveralls*
 ```
 npm run coverage
