@@ -1,5 +1,4 @@
 import keys from '../modules/keys'
-import global from '../modules/global'
 import events from '../modules/events'
 import domready from '../modules/domready'
 import Router from '../modules/router'
