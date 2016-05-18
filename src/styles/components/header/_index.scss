@@ -130,7 +130,11 @@ header {
 
       @include respond-to(medium) {
         display: inline-block;
-        margin: 0 $spacing;
+        margin: 0 $spacing/2;
+
+        &:first-child {
+          margin-left: $spacing
+        }
 
         &:after {
           top: auto;
