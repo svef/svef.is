@@ -1,0 +1,92 @@
+h1 Header Level 1
+p.text-large Large text. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+p Default text. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+p.text-small Small text. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+p
+  strong Pellentesque habitant morbi tristique
+  |  senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.&nbsp;
+  em Aenean ultricies mi vitae est.
+  |  Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed,&nbsp;
+  code commodo vitae
+  | , ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui.&nbsp;
+  a(href='#') Donec non enim
+  |  in turpis pulvinar facilisis. Ut felis.
+
+blockquote
+  p
+    | Blockquote. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.
+
+pre.
+  #header h1 a {
+    display: block;
+    width: 300px;
+    height: 80px;
+  }
+
+
+h2 Header Level 2
+p Ordered list
+ol
+  li Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+  li Aliquam tincidunt mauris eu risus.
+p Unordered list
+ul
+  li Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+  li
+    | Aliquam tincidunt mauris eu risus.
+    ul
+      li Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+      li Aliquam tincidunt mauris eu risus.
+  li Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+  li Aliquam tincidunt mauris eu risus.
+
+p Unordered list, long items
+ul
+  li Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.
+  li Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
+  li
+    | Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.
+    ul
+      li Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.
+      li Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
+  li Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.
+
+p Definition list
+dl
+  dt Phasellus ultrices
+  dd
+    | Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+    | aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+    | commodo consequat.
+  dt Lorem ipsum dolor sit amet
+  dd
+    | Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+    | aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+    | commodo consequat.
+
+
+h3 Header Level 3
+form(action='#', method='post')
+  div
+    label(for='name') Text Input:
+    input#name(type='text', name='name', value='', tabindex='1')
+  div
+    h4 Radio Button Choice
+    label(for='radio-choice-1') Choice 1
+    input#radio-choice-1(type='radio', name='radio-choice-1', tabindex='2', value='choice-1')
+    label(for='radio-choice-2') Choice 2
+    input#radio-choice-2(type='radio', name='radio-choice-2', tabindex='3', value='choice-2')
+  div
+    label(for='select-choice') Select Dropdown Choice:
+    select#select-choice(name='select-choice')
+      option(value='Choice 1') Choice 1
+      option(value='Choice 2') Choice 2
+      option(value='Choice 3') Choice 3
+  div
+    label(for='textarea') Textarea:
+    textarea#textarea(cols='40', rows='8', name='textarea')
+  div
+    label(for='checkbox') Checkbox:
+    input#checkbox(type='checkbox', name='checkbox')
+  div
+    input(type='submit', value='Submit')
