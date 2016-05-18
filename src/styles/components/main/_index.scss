@@ -6,13 +6,17 @@ main {
   z-index: 1;
 
   margin: 0 auto;
-  padding: 0 0 ($footer-height + $spacing);
+  padding: 0 0 $spacing;
 
   max-width: $page-max-width;
   min-width: $page-min-width;
   min-height: 100vh;
 
   color: $color-gray;
+
+  @include respond-to(medium) {
+    padding-bottom: $footer-height + $spacing;
+  }
 
   > .inner{
     position: relative;
