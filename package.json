@@ -15,7 +15,7 @@
   "contributors": [],
   "scripts": {
     "dev": "supervisor --quiet --watch gulp,gulpfile.js --no-restart-on exit --exec gulp server",
-    "lint": "eslint .",
+    "lint": "eslint src",
     "test": "nyc ava",
     "test-dev": "supervisor --quiet --watch test,src/scripts --no-restart-on exit --exec npm -- run test --silent",
     "coverage": "nyc report --reporter=text-lcov | coveralls",

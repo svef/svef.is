@@ -14,5 +14,17 @@ export default {
       const markup = JSON.parse(posts).map(postTemplate)
       document.getElementById('posts').innerHTML = markup
     })
+
+    const form = document.getElementById('slack-invite')
+    form.addEventListener('submit', (event) => {
+      event.preventDefault()
+
+      const email = document.getElementById('slack-email').value
+      requests.post(`${apiUrl}/slack`, { email }).then((result) => {
+        if (result.ok) {
+          form.remove()
+        }
+      })
+    })
   },
 }
