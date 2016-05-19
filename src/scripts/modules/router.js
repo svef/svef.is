@@ -6,7 +6,8 @@ import historySupported from './history-support'
 import events from './events'
 
 class Router {
-  constructor() {
+  constructor(routes) {
+    this.routes = routes
     this.supported = historySupported
 
     this.state = {
@@ -17,10 +18,20 @@ class Router {
       last: '',
     }
 
+    // Load the initial route
+    this.loadRoute()
+
     this.setState('path', this.state.path)
 
     window.onpopstate = () => {
       this.navigate(window.location.pathname + window.location.search + window.location.hash, false)
+    }
+  }
+
+  loadRoute() {
+    this.currentRoute = this.routes[this.state.path]
+    if (this.currentRoute) {
+      this.currentRoute.load()
     }
   }
 
@@ -51,6 +62,9 @@ class Router {
     this.setState('navigating', true)
 
     events.trigger(document, 'ajax-loading')
+
+    // Load route
+    this.loadRoute()
 
     req.get(this.state.path, 'router').then((data) => {
       window.scrollTo(0, 0)

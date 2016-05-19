@@ -4,8 +4,8 @@ import domready from '../modules/domready'
 import Router from '../modules/router'
 import { each } from 'lodash'
 
-export default () => {
-  const router = new Router()
+export default (routes) => {
+  const router = new Router(routes)
   if (!router.supported) {
     console.warn('No history API support')
     return
