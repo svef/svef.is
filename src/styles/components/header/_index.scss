@@ -61,7 +61,6 @@ header {
       stroke: transparent;
       fill: transparent;
 
-      html[svef-navigating="true"] &,
       .loading & {
         opacity: 0;
         transition: opacity 250ms;
