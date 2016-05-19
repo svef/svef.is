@@ -70,9 +70,17 @@ footer {
     }
   }
 
-  .title {
+  .inner {
     display: block;
     text-align: right;
+
+    span {
+      display: inline-block;
+
+      + span {
+        margin-left: $spacing;
+      }
+    }
   }
 
   html[svef-site='svef'] & {
