@@ -38,8 +38,12 @@ class Requests {
   post(url, params) {
     return this.ajax(url, {
       method: 'POST',
-      body: params,
-    })
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(params),
+    }).then((result) => JSON.parse(result))
   }
 }
 
