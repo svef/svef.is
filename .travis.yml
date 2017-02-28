@@ -1,32 +1,33 @@
 language: node_js
 node_js:
-  - '6'
+  - '7'
+
+before_install:
+  - time npm i -g yarn --cache-min 999999999
 
 cache:
   directories:
-  - node_modules
+    - node_modules
+    - $HOME/.yarn-cache
+    - $HOME/.npm
 
 install:
-  - npm install --loglevel=error --no-progress
+  - time yarn
 
 script:
-  - npm run lint
-  - npm run test
-  - npm run build
+  - yarn run test
+  - yarn run build
 
-after_success:
-  - npm run coverage
-
-deploy:
-  provider: gcs
-  access_key_id: GOOGEUJBQSCEOELPGXAN
-  secret_access_key:
-    secure: fgFN508oPfYhafRl9pt27+5o4ZX32hBiqDKh/S6dFPXlFsyawf3Qac2IZ5znG7OdbsvarzuJeNMrdzE7dr7Mj0HJh1kxgq688gDGMlKpCwjQsqKc2f3Q6iVN6dQ9vTAPJwo1/xBfGJ9e12+Kkc2XCWhk5ycXSCOZs1+jrBYZMYiTQmjlkkIDz1uwmQvl+vkGc/xt+M5lhHWTdgFKCepuLanNQj61jqAqIdkfVhYcqVX8EUxTEU+ptvIjEX2kM8nRFxPHbE3I8KlGKJDvGfylCfvUmbVR3+xYp2Lssb8GS5vkWnfY3XauGsveA3jCl58Oemk/wv345qf1KcOQoseV2aqB6EsDnPDabfF9eFDjLBL27sZuHsATvQKG+5Y+s0avfkamur1sn5KrEPa4LQFYMm2kcQWoYcJtsUuYMfecb/qZ5AxLEWUFMYyV35u22iksHa06yMwJFJ2KLhPYHRPZzG476WWLGx4XnSUycPeMJZRYocEujF17VqKJlSsO5a5GuXHbzxPedFcKHtRdM7+PwrgSXU45Zl7pzWRO+zMc3cF/SepSwtyA5OL5P8qy+ohXEfUmbzwxVfReZuIA6kciyrieJ+l6YDhuuk5gI8+WCG9EADYSEXokCjwNYVbCA15P8irsI5+K93XB/BhsPfyovui5sd1z8Vv5m0mosDOKi68=
-  bucket: beta.svef.is
-  skip_cleanup: true
-  local-dir: dist
-  acl: public-read
-  cache_control: "no-cache"
-  on:
-    branch: develop
-    repo: svef/svef.is
+# deploy:
+#   provider: gcs
+#   access_key_id: GOOGEUJBQSCEOELPGXAN
+#   secret_access_key:
+#     secure: fgFN508oPfYhafRl9pt27+5o4ZX32hBiqDKh/S6dFPXlFsyawf3Qac2IZ5znG7OdbsvarzuJeNMrdzE7dr7Mj0HJh1kxgq688gDGMlKpCwjQsqKc2f3Q6iVN6dQ9vTAPJwo1/xBfGJ9e12+Kkc2XCWhk5ycXSCOZs1+jrBYZMYiTQmjlkkIDz1uwmQvl+vkGc/xt+M5lhHWTdgFKCepuLanNQj61jqAqIdkfVhYcqVX8EUxTEU+ptvIjEX2kM8nRFxPHbE3I8KlGKJDvGfylCfvUmbVR3+xYp2Lssb8GS5vkWnfY3XauGsveA3jCl58Oemk/wv345qf1KcOQoseV2aqB6EsDnPDabfF9eFDjLBL27sZuHsATvQKG+5Y+s0avfkamur1sn5KrEPa4LQFYMm2kcQWoYcJtsUuYMfecb/qZ5AxLEWUFMYyV35u22iksHa06yMwJFJ2KLhPYHRPZzG476WWLGx4XnSUycPeMJZRYocEujF17VqKJlSsO5a5GuXHbzxPedFcKHtRdM7+PwrgSXU45Zl7pzWRO+zMc3cF/SepSwtyA5OL5P8qy+ohXEfUmbzwxVfReZuIA6kciyrieJ+l6YDhuuk5gI8+WCG9EADYSEXokCjwNYVbCA15P8irsI5+K93XB/BhsPfyovui5sd1z8Vv5m0mosDOKi68=
+#   bucket: beta.svef.is
+#   skip_cleanup: true
+#   local-dir: dist
+#   acl: public-read
+#   cache_control: "no-cache"
+#   on:
+#     branch: develop
+#     repo: svef/svef.is
