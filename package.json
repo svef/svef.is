@@ -8,15 +8,18 @@
     "react-dom": "^15.4.2"
   },
   "devDependencies": {
+    "@kadira/storybook": "^2.21.0",
+    "@kadira/storybook-addon-options": "^1.0.1",
     "react-scripts": "0.9.3",
-    "@kadira/storybook": "^2.21.0"
+    "supervisor": "^0.12.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "storybook": "supervisor --no-restart-on exit --quiet --watch .storybook --exec npm -- run start-storybook --silent",
+    "start-storybook": "start-storybook --port 9009 --static-dir public --config-dir .storybook",
+    "build-storybook": "build-storybook --static-dir public --config-dir .storybook --output-dir build-storybook"
   }
 }
