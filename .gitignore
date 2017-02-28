@@ -1,7 +1,0 @@
-.DS_Store
-node_modules/
-dev/
-dist/
-*.log
-.nyc_output
-coverage
